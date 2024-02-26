@@ -19,13 +19,9 @@
         <br />
         <br />
         <asp:Label runat="server" Text="Final Grade: "></asp:Label>
-        <asp:Label ID="finalGrade" runat="server" Text=""></asp:Label>
+        <asp:Label ID="finalGrade" runat="server" Text=""></asp:Label><br />
+        <asp:Label ID="errorMessage" runat="server" Text=""></asp:Label>
         
     </form>
-
-    <script type="text/javascript">
-        function displayCongratulations() {
-        }
-    </script>
 </body>
 </html>
