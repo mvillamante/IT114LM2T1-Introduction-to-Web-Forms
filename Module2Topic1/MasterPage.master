@@ -1,0 +1,33 @@
+<%@ Master Language="C#" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master Page</title>
+</head>
+<body>
+    <header id="header">
+        <h1>This is the Master Page</h1>
+    </header>
+    <nav id="navbar">
+        <h3>Navigate Exercises</h3>
+        <ul>
+            <li><a href="Exercise1.aspx">Exercise 1</a></li>
+            <li><a href="Exercise2.aspx">Exercise 2</a></li>
+            <li> <a href="Exercise3.aspx">Exercise 3</a></li>
+            <li><a href="Exercise4.aspx">Exercise 4</a></li>
+        </ul>
+    </nav>
+    <div id="Div1" runat="server">
+        <asp:ContentPlaceHolder id="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <footer id="footer">
+        Copyright Michaella <%: DateTime.Now.Year %> 
+    </footer>
+
+    <script runat="server">
+  
+    </script>
+</body>
+</html>
