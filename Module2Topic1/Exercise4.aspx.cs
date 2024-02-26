@@ -11,7 +11,20 @@ namespace Module1Exercise1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+        }
+        protected void SubmitButton_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                result.Text = "Full Name: " + fullName.Text + "<br />" +
+                              "Age: " + age.Text + "<br />" +
+                              "Email: " + email.Text + "<br />";
+            }
+            else
+            {
+                result.Text = "Validation failed. Please check the entered information.";
+            }
         }
     }
 }
