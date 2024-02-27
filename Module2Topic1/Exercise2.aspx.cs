@@ -14,6 +14,25 @@ namespace Module1Exercise1
         {
 
         }
+
+        protected void ClearControls()
+        {
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtAge.Text = "";
+
+            ddlTicketType.SelectedIndex = -1;
+
+            rblDaysAttending.ClearSelection();
+
+            foreach (ListItem item in cblPerformances.Items)
+            {
+                item.Selected = false;
+            }
+
+            proofOfPayment = new FileUpload();
+        }
+
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
@@ -25,7 +44,7 @@ namespace Module1Exercise1
                     string fileExtension = System.IO.Path.GetExtension(proofOfPayment.FileName).ToLower();
                     if (fileExtension == ".jpg" || fileExtension == ".png")
                     {
-                        string saveDirectory = @"D:\Pictures\Saved Pictures\";
+                        string saveDirectory = @"D:\Pictures";
 
                         string savePath = System.IO.Path.Combine(saveDirectory, proofOfPayment.FileName);
 
@@ -47,7 +66,10 @@ namespace Module1Exercise1
                 lblMessage.Text = "No file selected.";
             }
 
+            ClearControls();
+
             lblMessage.Text = sb.ToString();
+
         }
     }
 }

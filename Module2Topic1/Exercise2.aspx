@@ -20,6 +20,7 @@
     <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_basic_controls.htm#:~:text=DropDownList --%>
     Ticket Type:
     <asp:DropDownList ID="ddlTicketType" runat="server">
+        <asp:ListItem Text="Starter" Value="Starter"></asp:ListItem>
         <asp:ListItem Text="General Admissions" Value="General Admissions"></asp:ListItem>
         <asp:ListItem Text="Gold" Value="Gold"></asp:ListItem>
         <asp:ListItem Text="VIP" Value="VIP"></asp:ListItem>
@@ -28,8 +29,8 @@
     <%-- Hint: https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.webcontrols.radiobuttonlist?view=netframework-4.8.1#:~:text=RadioButtonList%20id=%22RadioButtonList1%22 --%>
     Days Attending:
     <asp:RadioButtonList ID="rblDaysAttending" runat="server">
-        <asp:ListItem Text="Day 1" Value="Day 1"></asp:ListItem>
-        <asp:ListItem Text="Day 2" Value="Day 2"></asp:ListItem>
+        <asp:ListItem Text="Day 1 Only" Value="Day 1"></asp:ListItem>
+        <asp:ListItem Text="Day 2 Only" Value="Day 2"></asp:ListItem>
         <asp:ListItem Text="Both Day 1 and 2" Value="Day 1 and 2"></asp:ListItem>
     </asp:RadioButtonList> <br /><br />
     <%-- TODO 3.5 Create a Checkbox List for the performances they are planning to attend. List down your favorite arists for the options. --%>
